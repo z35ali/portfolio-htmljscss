@@ -410,16 +410,16 @@ body {
 
 .items .openButton {
   float: left;
-  left: -400px;
+  left: -300px;
 }
 
 .items .projectLink {
   float: right;
-  right: -400px;
+  right: -300px;
 }
 .items .codeLink {
   float: right;
-  right: -400px;
+  right: -300px;
 }
 
 .items .item:hover .openButton {
