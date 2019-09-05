@@ -37,7 +37,6 @@ $(document).ready(function() {
   $(document).on('animated.slides', function() {
     numberofslides = $('#slides').superslides('size');
     currentslide = $('#slides').superslides('current');
-    console.log(currentslide);
     if (currentslide === 0) {
       // first slide
 
