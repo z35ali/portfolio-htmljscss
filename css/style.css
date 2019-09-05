@@ -410,16 +410,16 @@ body {
 
 .items .openButton {
   float: left;
-  left: -200px;
+  left: -400px;
 }
 
 .items .projectLink {
   float: right;
-  right: -200px;
+  right: -400px;
 }
 .items .codeLink {
   float: right;
-  right: -200px;
+  right: -400px;
 }
 
 .items .item:hover .openButton {
@@ -546,7 +546,7 @@ body {
 
 /*ribbon*/
 .corner-ribbon {
-  width: 400px;
+  width: 220px;
 
   position: absolute;
 
@@ -565,12 +565,13 @@ body {
 }
 
 .corner-ribbon.top-right {
-  top: 100px;
-  right: -100px;
+  top: 70px;
+  right: -12px;
   left: auto;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-  z-index: 99;
+  z-index: 4;
+  border-radius: 50%;
 }
 
 .corner-ribbon.grey {
