@@ -510,6 +510,10 @@ body {
   background-size: 100%;
 }
 
+.thumbnail {
+  height: 65%;
+  width: 65%;
+}
 /*Scrollbar*/
 
 ::-webkit-scrollbar {
