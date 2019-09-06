@@ -154,8 +154,12 @@ body {
 }
 
 .section {
-  padding: 100px 0;
-  opacity: 0;
+  padding: 80px;
+}
+
+.statsSection {
+  padding: 40px 0px 80px;
+  opacity: 1;
 }
 
 .aboutImg {
