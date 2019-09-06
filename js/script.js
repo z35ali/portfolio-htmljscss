@@ -38,8 +38,6 @@ $(document).ready(function() {
     numberofslides = $('#slides').superslides('size');
     currentslide = $('#slides').superslides('current');
     if (currentslide === 0) {
-      // first slide
-
       $('#scrollUp').css({
         background:
           "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide3.png')"
@@ -762,37 +760,6 @@ $(document).ready(function() {
 
   var skillsTopOffset = $('.skillsSection').offset().top;
 
-  $(window).scroll(function() {
-    scrollFunction();
-    if (window.pageYOffset > skillsTopOffset - $(window).height() + 200) {
-      $('.chart').easyPieChart({
-        easing: 'easeInOut',
-        barColor: 'white',
-        trackColor: false,
-        scaleColor: false,
-        lineWidth: 4,
-        size: 152,
-        onStep: function(from, to, percent) {
-          $(this.el)
-            .find('.percent')
-            .text(Math.round(percent));
-        }
-      });
-    }
-    $('.chart2').easyPieChart({
-      easing: 'easeInOut',
-      barColor: 'white',
-      trackColor: false,
-      scaleColor: false,
-      lineWidth: 4,
-      size: 152,
-      onStep: function(from, to, percent) {
-        $(this.el)
-          .find('.percent')
-          .text(Math.round(percent));
-      }
-    });
-  });
   $('[data-fancybox]').fancybox();
 
   $('#filters a').click(function() {
@@ -843,6 +810,31 @@ $(document).ready(function() {
     );
   });
 
+  $('#section03 a').click(function(e) {
+    e.preventDefault(); //do not go directly to section
+
+    var targetElement = $(this).attr('href');
+    var targetPosition = $(targetElement).offset().top;
+    $('html, body').animate(
+      {
+        scrollTop: targetPosition
+      },
+      'slow'
+    );
+  });
+
+  $('#section04 a').click(function(e) {
+    e.preventDefault(); //do not go directly to section
+
+    var targetElement = $(this).attr('href');
+    var targetPosition = $(targetElement).offset().top;
+    $('html, body').animate(
+      {
+        scrollTop: targetPosition
+      },
+      'slow'
+    );
+  });
   const nav = $('#navigation');
   const navTop = nav.offset().top;
 
@@ -853,20 +845,6 @@ $(document).ready(function() {
       $(nav).addClass('navColor');
     } else {
       $(nav).removeClass('navColor');
-    }
-  }
-  function scrollFunction() {
-    if (
-      document.body.scrollTop > 688 ||
-      document.documentElement.scrollTop > 688
-    ) {
-      document.getElementById('scrollUp').style.visibility = 'visible';
-
-      document.getElementById('scrollUp').style.opacity = '1.0';
-    } else {
-      document.getElementById('scrollUp').style.visibility = 'hidden';
-
-      document.getElementById('scrollUp').style.opacity = '0.0';
     }
   }
 });
