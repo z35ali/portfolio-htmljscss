@@ -34,674 +34,75 @@ $(document).ready(function() {
     pagination: false
   });
 
+  function slideChange(path, color) {
+    $('.progress-bar').css({
+      background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${path})`
+    });
+    $('.skillsSection').css({
+      background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${path})`
+    });
+    $('.contactSection').css({
+      background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${path})`
+    });
+
+    $('.items a').css({
+      background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${path})`
+    });
+
+    $('.contactButton').css({
+      'background-color': `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(${path})`
+    });
+    //contact button color change
+    $('.contactButton').hover(
+      function() {
+        $('.contactButton').css({
+          'background-color': 'white'
+        });
+        $('.contactButton').css('color', `${color}`);
+      },
+      function() {
+        $('.contactButton').css('color', 'white');
+        $('.contactButton').css({
+          'background-color': `linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url(${path})`
+        });
+      }
+    );
+  }
   $(document).on('animated.slides', function() {
     numberofslides = $('#slides').superslides('size');
     currentslide = $('#slides').superslides('current');
     if (currentslide === 0) {
-      $('#scrollUp').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide3.png')"
-      });
-      $('.progress-bar').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide3.png')"
-      });
-      $('.skillsSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide3.png')"
-      });
-      $('.contactSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide3.png')"
-      });
-
-      $('.items a').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide3.png')"
-      });
-
-      $('.contactButton').css({
-        'background-color':
-          "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide3.png')"
-      });
-      //contact button color change
-      $('.contactButton').hover(
-        function() {
-          $('.contactButton').css({
-            'background-color': 'white'
-          });
-          $('.contactButton').css('color', '#1F6490');
-        },
-        function() {
-          $('.contactButton').css('color', 'white');
-          $('.contactButton').css({
-            'background-color':
-              "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide3.png')"
-          });
-        }
-      );
+      slideChange('img/slide3.png', '#1F6490');
     } else if (currentslide === 1) {
-      $('#scrollUp').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide2.png')"
-      });
-      $('.progress-bar').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide2.png')"
-      });
-      $('.skillsSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide2.png')"
-      });
-      $('.contactSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide2.png')"
-      });
-      $('.items a').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide2.png')"
-      });
-
-      $('.contactButton').css('color', 'white');
-      $('.contactButton').css({
-        'background-color':
-          "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide2.png')"
-      });
-
-      //contact button color change
-      $('.contactButton').hover(
-        function() {
-          $('.contactButton').css({
-            'background-color': 'white'
-          });
-          $('.contactButton').css('color', '#1B874A');
-        },
-        function() {
-          $('.contactButton').css('color', 'white');
-          $('.contactButton').css({
-            'background-color':
-              "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide2.png')"
-          });
-        }
-      );
+      slideChange('img/slide2.png', '#1B874A');
     } else if (currentslide === 2) {
-      $('#scrollUp').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide1.png')"
-      });
-      $('.progress-bar').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide1.png')"
-      });
-      $('.skillsSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide1.png')"
-      });
-      $('.contactSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide1.png')"
-      });
-      $('.items a').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide1.png')"
-      });
-
-      $('.contactButton').css('color', 'white');
-      $('.contactButton').css({
-        'background-color':
-          "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide2.png')"
-      });
-
-      //contact button color change
-      $('.contactButton').hover(
-        function() {
-          $('.contactButton').css({
-            'background-color': 'white'
-          });
-          $('.contactButton').css('color', '#1B874A');
-        },
-        function() {
-          $('.contactButton').css('color', 'white');
-          $('.contactButton').css({
-            'background-color':
-              "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide2.png')"
-          });
-        }
-      );
+      slideChange('img/slide1.png', '#0b6c59');
     } else if (currentslide === 3) {
-      $('#scrollUp').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide4.png')"
-      });
-      $('.progress-bar').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide4.png')"
-      });
-      $('.skillsSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide4.png')"
-      });
-      $('.contactSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide4.png')"
-      });
-      $('.items a').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide4.png')"
-      });
-      $('.contactButton').css({
-        'background-color':
-          "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide4.png')"
-      });
-      //contact button color change
-      $('.contactButton').hover(
-        function() {
-          $('.contactButton').css({
-            'background-color': 'white'
-          });
-          $('.contactButton').css('color', '#673A78');
-        },
-        function() {
-          $('.contactButton').css('color', 'white');
-          $('.contactButton').css({
-            'background-color':
-              "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide4.png')"
-          });
-        }
-      );
+      slideChange('img/slide4.png', '#673A78');
     } else if (currentslide === 4) {
-      $('#scrollUp').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide5.png')"
-      });
-      $('.progress-bar').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide5.png')"
-      });
-      $('.skillsSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide5.png')"
-      });
-      $('.contactSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide5.png')"
-      });
-      $('.items a').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide5.png')"
-      });
-      $('.contactButton').css({
-        'background-color':
-          "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide5.png')"
-      });
-      //contact button color change
-      $('.contactButton').hover(
-        function() {
-          $('.contactButton').css({
-            'background-color': 'white'
-          });
-          $('.contactButton').css('color', '#1F2E3C');
-        },
-        function() {
-          $('.contactButton').css('color', 'white');
-          $('.contactButton').css({
-            'background-color':
-              "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide5.png')"
-          });
-        }
-      );
+      slideChange('img/slide5.png', '#096A59');
     } else if (currentslide === 5) {
-      $('#scrollUp').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide6.png')"
-      });
-      $('.progress-bar').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide6.png')"
-      });
-      $('.skillsSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide6.png')"
-      });
-      $('.contactSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide6.png')"
-      });
-      $('.items a').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide6.png')"
-      });
-
-      $('.contactButton').css({
-        'background-color':
-          "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide6.png')"
-      });
-      //contact button color change
-      $('.contactButton').hover(
-        function() {
-          $('.contactButton').css({
-            'background-color': 'white'
-          });
-          $('.contactButton').css('color', '#096A59');
-        },
-        function() {
-          $('.contactButton').css('color', 'white');
-          $('.contactButton').css({
-            'background-color':
-              "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide6.png')"
-          });
-        }
-      );
+      slideChange('img/slide6.png', '#167440');
     } else if (currentslide === 6) {
-      $('#scrollUp').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide7.png')"
-      });
-      $('.progress-bar').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide7.png')"
-      });
-      $('.skillsSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide7.png')"
-      });
-      $('.contactSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide7.png')"
-      });
-      $('.items a').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide7.png')"
-      });
-      $('.contactButton').css({
-        'background-color':
-          "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide7.png')"
-      });
-      //contact button color change
-      $('.contactButton').hover(
-        function() {
-          $('.contactButton').css({
-            'background-color': 'white'
-          });
-          $('.contactButton').css('color', '#167440');
-        },
-        function() {
-          $('.contactButton').css('color', 'white');
-          $('.contactButton').css({
-            'background-color':
-              "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide7.png')"
-          });
-        }
-      );
+      slideChange('img/slide7.png', '#167440');
     } else if (currentslide === 7) {
-      $('#scrollUp').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide8.png')"
-      });
-      $('.progress-bar').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide8.png')"
-      });
-      $('.skillsSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide8.png')"
-      });
-      $('.contactSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide8.png')"
-      });
-      $('.items a').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide8.png')"
-      });
-      $('.contactButton').css({
-        'background-color':
-          "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide8.png')"
-      });
-      //contact button color change
-      $('.contactButton').hover(
-        function() {
-          $('.contactButton').css({
-            'background-color': 'white'
-          });
-          $('.contactButton').css('color', '#18557B');
-        },
-        function() {
-          $('.contactButton').css('color', 'white');
-          $('.contactButton').css({
-            'background-color':
-              "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide8.png')"
-          });
-        }
-      );
+      slideChange('img/slide8.png', '#18557B');
     } else if (currentslide === 8) {
-      $('#scrollUp').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide9.png')"
-      });
-      $('.progress-bar').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide9.png')"
-      });
-      $('.skillsSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide9.png')"
-      });
-      $('.contactSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide9.png')"
-      });
-      $('.items a').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide9.png')"
-      });
-      $('.contactButton').css({
-        'background-color':
-          "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide9.png')"
-      });
-      //contact button color change
-      $('.contactButton').hover(
-        function() {
-          $('.contactButton').css({
-            'background-color': 'white'
-          });
-          $('.contactButton').css('color', '#5F2C73');
-        },
-        function() {
-          $('.contactButton').css('color', 'white');
-          $('.contactButton').css({
-            'background-color':
-              "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide9.png')"
-          });
-        }
-      );
+      slideChange('img/slide9.png', '#5F2C73');
     } else if (currentslide === 9) {
-      $('#scrollUp').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide10.png')"
-      });
-      $('.progress-bar').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide10.png')"
-      });
-      $('.skillsSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide10.png')"
-      });
-      $('.contactSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide10.png')"
-      });
-      $('.items a').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide10.png')"
-      });
-      $('.contactButton').css({
-        'background-color':
-          "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide10.png')"
-      });
-      //contact button color change
-      $('.contactButton').hover(
-        function() {
-          $('.contactButton').css({
-            'background-color': 'white'
-          });
-          $('.contactButton').css('color', '#1A2734');
-        },
-        function() {
-          $('.contactButton').css('color', 'white');
-          $('.contactButton').css({
-            'background-color':
-              "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide10.png')"
-          });
-        }
-      );
+      slideChange('img/slide10.png', '#1A2734');
     } else if (currentslide === 10) {
-      $('#scrollUp').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide11.png')"
-      });
-      $('.progress-bar').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide11.png')"
-      });
-      $('.skillsSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide11.png')"
-      });
-      $('.contactSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide11.png')"
-      });
-      $('.items a').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide11.png')"
-      });
-      $('.contactButton').css({
-        'background-color':
-          "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide11.png')"
-      });
-      //contact button color change
-      $('.contactButton').hover(
-        function() {
-          $('.contactButton').css({
-            'background-color': 'white'
-          });
-          $('.contactButton').css('color', '#A18304');
-        },
-        function() {
-          $('.contactButton').css('color', 'white');
-          $('.contactButton').css({
-            'background-color':
-              "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide11.png')"
-          });
-        }
-      );
+      slideChange('img/slide11.png', '#A18304');
     } else if (currentslide === 11) {
-      $('#scrollUp').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide12.png')"
-      });
-      $('.progress-bar').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide12.png')"
-      });
-      $('.skillsSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide12.png')"
-      });
-      $('.contactSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide12.png')"
-      });
-      $('.items a').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide12.png')"
-      });
-      $('.contactButton').css({
-        'background-color':
-          "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide12.png')"
-      });
-      //contact button color change
-      $('.contactButton').hover(
-        function() {
-          $('.contactButton').css({
-            'background-color': 'white'
-          });
-          $('.contactButton').css('color', '#9C5613');
-        },
-        function() {
-          $('.contactButton').css('color', 'white');
-          $('.contactButton').css({
-            'background-color':
-              "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide12.png')"
-          });
-        }
-      );
+      slideChange('img/slide12.png', '#9C5613');
     } else if (currentslide === 12) {
-      $('#scrollUp').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide13.png')"
-      });
-      $('.progress-bar').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide13.png')"
-      });
-      $('.skillsSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide13.png')"
-      });
-      $('.contactSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide13.png')"
-      });
-      $('.items a').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide13.png')"
-      });
-      $('.contactButton').css({
-        'background-color':
-          "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide13.png')"
-      });
-      //contact button color change
-      $('.contactButton').hover(
-        function() {
-          $('.contactButton').css({
-            'background-color': 'white'
-          });
-          $('.contactButton').css('color', '#9A3126');
-        },
-        function() {
-          $('.contactButton').css('color', 'white');
-          $('.contactButton').css({
-            'background-color':
-              "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide13.png')"
-          });
-        }
-      );
+      slideChange('img/slide13.png', '#9A3126');
     } else if (currentslide === 13) {
-      $('#scrollUp').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide14.png')"
-      });
-      $('.progress-bar').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide14.png')"
-      });
-      $('.skillsSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide14.png')"
-      });
-      $('.contactSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide14.png')"
-      });
-      $('.items a').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide14.png')"
-      });
-      $('.contactButton').css({
-        'background-color':
-          "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide14.png')"
-      });
-      //contact button color change
-      $('.contactButton').hover(
-        function() {
-          $('.contactButton').css({
-            'background-color': 'white'
-          });
-          $('.contactButton').css('color', '#A26806');
-        },
-        function() {
-          $('.contactButton').css('color', 'white');
-          $('.contactButton').css({
-            'background-color':
-              "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide14.png')"
-          });
-        }
-      );
+      slideChange('img/slide14.png', '#A26806');
     } else if (currentslide === 14) {
-      $('#scrollUp').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide15.png')"
-      });
-      $('.progress-bar').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide15.png')"
-      });
-      $('.skillsSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide15.png')"
-      });
-      $('.contactSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide15.png')"
-      });
-      $('.items a').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide15.png')"
-      });
-      $('.contactButton').css({
-        'background-color':
-          "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide15.png')"
-      });
-      //contact button color change
-      $('.contactButton').hover(
-        function() {
-          $('.contactButton').css({
-            'background-color': 'white'
-          });
-          $('.contactButton').css('color', '#8E3700');
-        },
-        function() {
-          $('.contactButton').css('color', 'white');
-          $('.contactButton').css({
-            'background-color':
-              "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide15.png')"
-          });
-        }
-      );
-    } else if (currentslide === 15) {
-      $('#scrollUp').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide16.png')"
-      });
-      $('.progress-bar').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide16.png')"
-      });
-      $('.skillsSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide16.png')"
-      });
-      $('.contactSection').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide16.png')"
-      });
-      $('.items a').css({
-        background:
-          "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('img/slide16.png')"
-      });
-      $('.contactButton').css({
-        'background-color':
-          "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide16.png')"
-      });
-      //contact button color change
-      $('.contactButton').hover(
-        function() {
-          $('.contactButton').css({
-            'background-color': 'white'
-          });
-          $('.contactButton').css('color', '#7E2318');
-        },
-        function() {
-          $('.contactButton').css('color', 'white');
-          $('.contactButton').css({
-            'background-color':
-              "linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('img/slide16.png')"
-          });
-        }
-      );
+      slideChange('img/slide15.png', '#8E3700');
+    } else if (currentslide === 16) {
+      slideChange('img/slide15.png', '#7E2318');
     }
   });
 
@@ -716,7 +117,6 @@ $(document).ready(function() {
   var typed2 = new Typed('.myName', {
     strings: ['My Name is Zafar Ali'],
     typeSpeed: 100,
-
     loop: false,
     startDelay: 1000,
     showCursor: false
