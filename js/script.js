@@ -23,7 +23,7 @@ $(document).ready(function() {
       queue: false
     }
   });
-  $('.main').effect('bounce', { times: 2, distance: 50 }, 2800);
+  $('.main').effect('bounce', { times: 3, distance: 50 }, 5000);
   $('#particles-js').animate({ opacity: 0.5 }, 1000);
   $('.section').animate({ opacity: 1 }, 1000);
   $('#portfolio').animate({ opacity: 1 }, 1000);
@@ -706,12 +706,7 @@ $(document).ready(function() {
   });
 
   var typed = new Typed('.typed', {
-    strings: [
-      'Software Engineer.',
-      'Android Developer.',
-      'Web Developer.',
-      'Programmer.'
-    ],
+    strings: ['Mobile Developer.', 'Web Developer.', 'Programmer.'],
     typeSpeed: 70,
     backSpeed: 35,
     loop: true,
