@@ -23,11 +23,7 @@ $(document).ready(function() {
       queue: false
     }
   });
-  $('.main').effect('bounce', { times: 3, distance: 50 }, 5000);
-  $('#particles-js').animate({ opacity: 0.5 }, 1000);
-  $('.section').animate({ opacity: 1 }, 1000);
-  $('#portfolio').animate({ opacity: 1 }, 1000);
-
+  $('.main').effect('bounce', { times: 1, distance: 50 }, 3500);
   $('#slides').superslides({
     animation: 'fade',
     play: false,
@@ -35,6 +31,7 @@ $(document).ready(function() {
   });
 
   function slideChange(path, color) {
+    $('.main').effect('bounce', { times: 1, distance: 50 }, 1500);
     $('.progress-bar').css({
       background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${path})`
     });
@@ -72,37 +69,21 @@ $(document).ready(function() {
     numberofslides = $('#slides').superslides('size');
     currentslide = $('#slides').superslides('current');
     if (currentslide === 0) {
-      slideChange('img/slide3.png', '#1F6490');
+      slideChange('img/slide1.png', '#1F6490');
     } else if (currentslide === 1) {
       slideChange('img/slide2.png', '#1B874A');
     } else if (currentslide === 2) {
-      slideChange('img/slide1.png', '#0b6c59');
+      slideChange('img/slide3.png', '#0b6c59');
     } else if (currentslide === 3) {
       slideChange('img/slide4.png', '#673A78');
     } else if (currentslide === 4) {
-      slideChange('img/slide5.png', '#096A59');
-    } else if (currentslide === 5) {
-      slideChange('img/slide6.png', '#167440');
-    } else if (currentslide === 6) {
-      slideChange('img/slide7.png', '#167440');
-    } else if (currentslide === 7) {
-      slideChange('img/slide8.png', '#18557B');
-    } else if (currentslide === 8) {
-      slideChange('img/slide9.png', '#5F2C73');
-    } else if (currentslide === 9) {
       slideChange('img/slide10.png', '#1A2734');
-    } else if (currentslide === 10) {
+    } else if (currentslide === 5) {
       slideChange('img/slide11.png', '#A18304');
-    } else if (currentslide === 11) {
+    } else if (currentslide === 6) {
       slideChange('img/slide12.png', '#9C5613');
-    } else if (currentslide === 12) {
+    } else if (currentslide === 7) {
       slideChange('img/slide13.png', '#9A3126');
-    } else if (currentslide === 13) {
-      slideChange('img/slide14.png', '#A26806');
-    } else if (currentslide === 14) {
-      slideChange('img/slide15.png', '#8E3700');
-    } else if (currentslide === 16) {
-      slideChange('img/slide15.png', '#7E2318');
     }
   });
 
@@ -205,7 +186,7 @@ $(document).ready(function() {
     );
   });
 
-  $('#section03 a').click(function(e) {
+  $('#downArrow a').click(function(e) {
     e.preventDefault(); //do not go directly to section
 
     var targetElement = $(this).attr('href');
@@ -218,28 +199,44 @@ $(document).ready(function() {
     );
   });
 
-  $('#section04 a').click(function(e) {
+  $('#upArrow a').click(function(e) {
     e.preventDefault(); //do not go directly to section
 
     var targetElement = $(this).attr('href');
     var targetPosition = $(targetElement).offset().top;
+
     $('html, body').animate(
       {
         scrollTop: targetPosition
       },
       'slow'
     );
+    $('.main').effect('bounce', { times: 1, distance: 50 }, 2000);
   });
   const nav = $('#navigation');
   const navTop = nav.offset().top;
 
-  $(window).on('scroll', stickyNavigation);
+  $(window).on('scroll', scrollFunctions);
 
-  function stickyNavigation() {
-    if ($(window).scrollTop() > 688) {
-      $(nav).addClass('navColor');
-    } else {
-      $(nav).removeClass('navColor');
+  function scrollFunctions() {
+    stickyNavigation();
+    progressBarWidthChange();
+    function stickyNavigation() {
+      if ($(window).scrollTop() > 688) {
+        $(nav).addClass('navColor');
+      } else {
+        $(nav).removeClass('navColor');
+      }
+    }
+
+    function progressBarWidthChange() {
+      var winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      var height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      document.getElementById('myBar').style.width = scrolled + '%';
     }
   }
 });

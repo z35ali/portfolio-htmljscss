@@ -32,6 +32,8 @@
          crossorigin="anonymous"
          />
       <link rel="stylesheet" type="text/css" href="css/loader.css" />
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
       <title>Zafar's Portfolio</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
@@ -80,6 +82,7 @@
                <li class="nav-item">
                   <a class="nav-link" href="#portfolio">Portfolio</a>
                </li>
+            
             </ul>
          </div>
       </nav>
@@ -91,7 +94,7 @@
          <div class="overlay"></div>
          <ul class="slides-container">
             <li>
-               <img src="img/slide3.png" alt="slide2" />
+               <img src="img/slide1.png" alt="slide2" />
                <div class="container"></div>
             </li>
             <li>
@@ -99,31 +102,11 @@
                <div class="container"></div>
             </li>
             <li>
-               <img src="img/slide1.png" alt="slide1" />
+               <img src="img/slide3.png" alt="slide1" />
                <div class="container"></div>
             </li>
             <li>
                <img src="img/slide4.png" alt="slide2" />
-               <div class="container"></div>
-            </li>
-            <li>
-               <img src="img/slide5.png" alt="slide2" />
-               <div class="container"></div>
-            </li>
-            <li>
-               <img src="img/slide6.png" alt="slide2" />
-               <div class="container"></div>
-            </li>
-            <li>
-               <img src="img/slide7.png" alt="slide2" />
-               <div class="container"></div>
-            </li>
-            <li>
-               <img src="img/slide8.png" alt="slide2" />
-               <div class="container"></div>
-            </li>
-            <li>
-               <img src="img/slide9.png" alt="slide2" />
                <div class="container"></div>
             </li>
             <li>
@@ -142,25 +125,14 @@
                <img src="img/slide13.png" alt="slide2" />
                <div class="container"></div>
             </li>
-            <li>
-               <img src="img/slide14.png" alt="slide2" />
-               <div class="container"></div>
-            </li>
-            <li>
-               <img src="img/slide15.png" alt="slide2" />
-               <div class="container"></div>
-            </li>
-            <li>
-               <img src="img/slide16.png" alt="slide2" />
-               <div class="container"></div>
-            </li>
+          
          </ul>
          <nav class="slides-navigation">
             <a href="#" class="prev"></a>
             <a href="#" class="next"></a>
          </nav>
          <div>
-         <section id="section03" class="demo">
+         <section id="downArrow" class="demo">
             <a href="#about"><span></span></a>
           </section>
          </div>
@@ -174,7 +146,7 @@
 
       </div>
    </div>
-      <div id="about" class="section">
+      <div id="about" class="section" data-aos='fade-left'>
          <div class="container">
             <div class="row">
                <div class="col-md-5">
@@ -201,7 +173,7 @@
             </div>
          </div>
       </div>
-      <div id="skills" class="skillsSection section">
+      <div id="skills" class="skillsSection section" data-aos= 'fade-right'>
          <div class="container"></div>
          <div class="row">
             <div class="col-md-12 text-center">
@@ -268,7 +240,7 @@
             </div>
          </div>
       </div>
-      <div id="stats" class="statsSection">
+      <div id="stats" class="statsSection" data-aos= 'fade-left'>
          <div class="container">
             <div class="row">
                <div class="col-md-6 col-sm-12 mt-5">
@@ -294,10 +266,11 @@
                <div class="col-md-6 col-sm-12 mt-5">
                   <div class="squareInnerContainer">
                      <div class="squareIcon">
-                        <i class="fas fa-handshake"></i>
+                        <i class="fa fa-laptop"></i>
+                        <i class="fa fa-mobile"></i>
                      </div>
                      <div class="squareContent">
-                        <h2>Compatibility</h2>
+                        <h2>Responsive Design</h2>
                      </div>
                   </div>
                </div>
@@ -334,7 +307,7 @@
             </div>
          </div>
       </div>
-      <div id="contact" class="contactSection section">
+      <div id="contact" class="contactSection section" data-aos= 'fade-right'>
          <div class="col-md-12 text-center">
             <p class="subHeading">Like what you see?</p>
             <h2>I'd love to connect with you!</h2>
@@ -346,7 +319,7 @@
             <a class="contactButton" href="mailTo:zafar.a.ali2@gmail.com">Send Me An Email</a>
          </div>
       </div>
-      <div id="portfolio" class="section">
+      <div id="portfolio" class="section" data-aos= 'fade-left'>
          <div class="container">
             <div class="row">
                <div class="heading">
@@ -852,26 +825,18 @@
          </div>
       </div>
    
-      <section id="section04" class="demo">
+      <section id="upArrow" class="demo">
             <a href="#slides"><span></span></a>
-          </section>
+      </section>
       
       <div class="copyrightSection section">
          <div class="col-md-12">
             <p>&copy; Copyright Zafar Ali 2019</p>
          </div>
       </div>
-      <script>
-         window.onscroll = function () { myFunction() };
-         
-         function myFunction() {
-             var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-             var scrolled = (winScroll / height) * 100;
-             document.getElementById("myBar").style.width = scrolled + "%";
-         }
-         
-      </script>
+
+     
+    
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <script src="js/particles.min.js"></script>
       <script src="js/app.js"></script>
@@ -895,6 +860,16 @@
          ></script>
       <script src="js/script.js"></script>
       <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.js"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+      <script>
+    AOS.init({
+       disable: false,
+        offset: 350, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 1000 // values from 0 to 3000, with step 50ms
+      });
+      </script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    
    </body>
 </html>
