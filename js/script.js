@@ -96,7 +96,7 @@ $(document).ready(function() {
     showCursor: false
   });
   var typed2 = new Typed('.myName', {
-    strings: ['My Name is Zafar Ali...'],
+    strings: ["I'm Zafar Ali..."],
     typeSpeed: 100,
     loop: true,
     startDelay: 1000,
