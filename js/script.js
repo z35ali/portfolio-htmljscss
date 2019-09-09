@@ -98,17 +98,8 @@ $(document).ready(function() {
   var typed2 = new Typed('.myName', {
     strings: ['My Name is Zafar Ali'],
     typeSpeed: 100,
-    loop: false,
-    startDelay: 1000,
-    showCursor: false
-  });
-
-  var typed3 = new Typed('.dots', {
-    strings: ['...'],
-    typeSpeed: 500,
-    backSpeed: 500,
     loop: true,
-    startDelay: 3000,
+    startDelay: 5000,
     showCursor: false
   });
 
