@@ -96,11 +96,12 @@ $(document).ready(function() {
     showCursor: false
   });
   var typed2 = new Typed('.myName', {
-    strings: ['My Name is Zafar Ali'],
+    strings: ['My Name is Zafar Ali...'],
     typeSpeed: 100,
     loop: true,
-    startDelay: 5000,
-    showCursor: false
+    startDelay: 1000,
+    showCursor: false,
+    backSpeed: 100
   });
 
   $('.owl-carousel').owlCarousel({
