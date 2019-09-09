@@ -32,7 +32,6 @@ body {
 }
 
 #portfolio {
-  opacity: 0;
   overflow: hidden;
 }
 
@@ -53,7 +52,7 @@ body {
 .progress-bar {
   height: 8px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('../img/slide3.png');
+    url('../img/slide1.png');
 
   width: 0%;
   border-radius: 20px 20px;
@@ -159,7 +158,6 @@ body {
 
 .statsSection {
   padding: 40px 0px 80px;
-  opacity: 1;
 }
 
 .aboutImg {
@@ -174,7 +172,7 @@ body {
 .skillsSection,
 .contactSection {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('../img/slide3.png');
+    url('../img/slide1.png');
   color: white;
 }
 
@@ -261,7 +259,7 @@ body {
   border-radius: 2px;
   opacity: 1;
   background-color: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
-    url('../img/slide3.png');
+    url('../img/slide1.png');
   -webkit-transition: all 0.2s linear, 0.8s;
   -moz-transition: all 0.2s linear, 0.8s;
   -ms-transition: all 0.2s linear, 0.8s;
@@ -357,7 +355,7 @@ body {
   width: 40px;
   height: 40px;
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('../img/slide3.png');
+    url('../img/slide1.png');
 
   position: relative;
   display: inline-block;
@@ -591,10 +589,10 @@ section {
   opacity: 1;
 }
 
-#section03 a {
+#downArrow a {
   padding-top: 60px;
 }
-#section03 a span {
+#downArrow a span {
   position: absolute;
   top: 0;
   left: 50%;
@@ -605,7 +603,7 @@ section {
   border-radius: 100%;
   box-sizing: border-box;
 }
-#section03 a span::after {
+#downArrow a span::after {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -620,7 +618,7 @@ section {
   box-sizing: border-box;
 }
 
-#section03 a span::before {
+#downArrow a span::before {
   position: absolute;
   top: 0;
   left: 0;
@@ -667,10 +665,10 @@ section {
   }
 }
 
-#section04 a {
+#upArrow a {
   padding-bottom: 40px;
 }
-#section04 a span {
+#upArrow a span {
   position: absolute;
   top: 0;
   left: 50%;
@@ -681,7 +679,7 @@ section {
   border-radius: 100%;
   box-sizing: border-box;
 }
-#section04 a span::after {
+#upArrow a span::after {
   position: absolute;
   top: 65%;
   left: 50%;
@@ -696,7 +694,7 @@ section {
   box-sizing: border-box;
 }
 
-#section04 a span::before {
+#upArrow a span::before {
   position: absolute;
   top: 0;
   left: 0;
