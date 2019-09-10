@@ -2,7 +2,14 @@ $(window).on('load', function() {
   $('html').css({
     overflowY: 'hidden'
   });
-
+  $('.items').isotope({
+    filter: '.websites',
+    animationOptions: {
+      duration: 1500,
+      easing: 'linear',
+      queue: false
+    }
+  });
   $('.cup')
     .delay(500)
 
@@ -15,14 +22,6 @@ $(window).on('load', function() {
 });
 
 $(document).ready(function() {
-  $('.items').isotope({
-    filter: '.websites',
-    animationOptions: {
-      duration: 1500,
-      easing: 'linear',
-      queue: false
-    }
-  });
   $('.main').effect('bounce', { times: 1, distance: 50 }, 3500);
   $('#slides').superslides({
     animation: 'fade',
