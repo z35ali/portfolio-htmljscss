@@ -16,7 +16,7 @@ $(window).on('load', function() {
 
 $(document).ready(function() {
   $('.items').isotope({
-    filter: '*',
+    filter: '.websites',
     animationOptions: {
       duration: 1500,
       easing: 'linear',
