@@ -162,13 +162,6 @@ body {
 .portfolioSection {
   padding: 40px 0px 60px;
 }
-.aboutImg {
-  max-width: 130%;
-  margin-top: -15px;
-  border-radius: 1%;
-  margin-left: -20px;
-  margin-bottom: -50px;
-}
 
 .aboutImgReal {
   max-width: 100%;
@@ -489,6 +482,13 @@ body {
   .aboutSection {
     padding: 85px 80px 44px 80px;
   }
+  .aboutImg {
+    max-width: 130%;
+    margin-top: -15px;
+    border-radius: 1%;
+    margin-left: -50px;
+    margin-bottom: -50px;
+  }
 }
 
 #navigation li {
@@ -506,7 +506,14 @@ body {
     left: 0px;
   }
   .aboutSection {
-    padding: 80px 80px 44px 80px;
+    padding: 80px 80px 50px 80px;
+  }
+  .aboutImg {
+    max-width: 130%;
+    margin-top: -15px;
+    border-radius: 1%;
+    margin-left: -20px;
+    margin-bottom: -50px;
   }
 }
 
@@ -519,7 +526,14 @@ body {
     left: 0px;
   }
   .aboutSection {
-    padding: 80px 80px 44px 80px;
+    padding: 80px 80px 50px 80px;
+  }
+  .aboutImg {
+    max-width: 130%;
+    margin-top: -15px;
+    border-radius: 1%;
+    margin-left: -20px;
+    margin-bottom: -50px;
   }
 }
 
