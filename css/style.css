@@ -96,12 +96,15 @@ body {
 }
 
 .slides-navigation a.next {
+  position: absolute;
   top: 300px;
   right: 20px;
   background-image: url(../img/icons/next.png);
 }
 
 .slides-navigation a.prev {
+  position: absolute;
+
   left: 20px;
   top: 300px;
   transform: scaleX(-1);
@@ -471,7 +474,27 @@ body {
   -o-transition: background 0.5s linear;
   transition: background 0.5s linear;
 }
-@media (min-width: 1025px) {
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  #navigation li {
+    padding: 0 5.8px;
+  }
+  #navigation a:hover:after {
+    width: 100%;
+    left: 0px;
+  }
+  .aboutSection {
+    padding: 80px 80px 50px 80px;
+  }
+  .aboutImg {
+    max-width: 130%;
+    margin-top: -15px;
+    border-radius: 1%;
+    margin-left: -20px;
+    margin-bottom: -50px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
   .navColor {
     background-color: black;
   }
