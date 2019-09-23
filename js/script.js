@@ -76,13 +76,11 @@ $(document).ready(function() {
     } else if (currentslide === 3) {
       slideChange('img/slide4.png', '#673A78');
     } else if (currentslide === 4) {
-      slideChange('img/slide5.png', '#1A2734');
+      slideChange('img/slide5.png', '#A18304');
     } else if (currentslide === 5) {
-      slideChange('img/slide6.png', '#A18304');
+      slideChange('img/slide6.png', '#9C5613');
     } else if (currentslide === 6) {
-      slideChange('img/slide7.png', '#9C5613');
-    } else if (currentslide === 7) {
-      slideChange('img/slide8.png', '#9A3126');
+      slideChange('img/slide7.png', '#9A3126');
     }
   });
 
