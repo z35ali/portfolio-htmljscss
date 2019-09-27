@@ -3,7 +3,7 @@ $(window).on('load', function() {
     overflowY: 'hidden'
   });
   $('.items').isotope({
-    filter: '.websites',
+    filter: '*',
     animationOptions: {
       duration: 1500,
       easing: 'linear',
@@ -28,7 +28,6 @@ $(document).ready(function() {
     play: false,
     pagination: false
   });
-
   function slideChange(path, color) {
     $('.main').effect('bounce', { times: 1, distance: 50 }, 1500);
     $('.progress-bar').css({
