@@ -3,7 +3,7 @@ $(window).on('load', function() {
     overflowY: 'hidden'
   });
   $('.items').isotope({
-    filter: '*',
+    filter: 'website',
     animationOptions: {
       duration: 1500,
       easing: 'linear',
