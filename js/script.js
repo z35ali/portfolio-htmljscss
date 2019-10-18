@@ -144,25 +144,10 @@ $(document).ready(function() {
     return false;
   });
 
-  $('#navigation li a').click(function(e) {
-    e.preventDefault(); //do not go directly to section
-
-    var width = $(window).width();
-    if (width < 992) {
-      $('#navbarNav').collapse('toggle');
-    }
-    var targetElement = $(this).attr('href');
-    var targetPosition = $(targetElement).offset().top;
-    $('html, body').animate(
-      {
-        scrollTop: targetPosition - 75
-      },
-      'slow'
-    );
-  });
-
   $('#navigation a').click(function(e) {
-    e.preventDefault(); //do not go directly to section
+    if ($('.navLink').hasClass('.resume')) {
+      e.preventDefault(); //do not go directly to section
+    }
 
     var targetElement = $(this).attr('href');
     var targetPosition = $(targetElement).offset().top;
@@ -181,7 +166,7 @@ $(document).ready(function() {
     var targetPosition = $(targetElement).offset().top;
     $('html, body').animate(
       {
-        scrollTop: targetPosition
+        scrollTop: targetPosition - 75
       },
       'slow'
     );
@@ -202,7 +187,6 @@ $(document).ready(function() {
     $('.main').effect('bounce', { times: 1, distance: 50 }, 2000);
   });
   const nav = $('#navigation');
-  const navTop = nav.offset().top;
 
   $(window).on('scroll', scrollFunctions);
 
