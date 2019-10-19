@@ -84,7 +84,7 @@ $(document).ready(function() {
   });
 
   var typed = new Typed('.typed', {
-    strings: ['Mobile Developer.', 'Web Developer.', 'Programmer.'],
+    strings: ['Web Developer.', 'Mobile Developer.', 'Programmer.'],
     typeSpeed: 70,
     backSpeed: 35,
     loop: true,
