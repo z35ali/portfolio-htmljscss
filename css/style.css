@@ -497,7 +497,7 @@ body {
 
 @media screen and (min-width: 1000px) {
   .navColor {
-    background-color: black;
+    background-color: #252627;
   }
   #navigation a:hover:after {
     width: 100%;
