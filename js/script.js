@@ -188,27 +188,21 @@ $(document).ready(function() {
   });
   const nav = $('#navigation');
 
-  $(window).on('scroll', scrollFunctions);
+  $(window).on('scroll', scrollBehaviour);
 
-  function scrollFunctions() {
-    stickyNavigation();
-    progressBarWidthChange();
-    function stickyNavigation() {
-      if ($(window).scrollTop() > 688) {
-        $(nav).addClass('navColor');
-      } else {
-        $(nav).removeClass('navColor');
-      }
-    }
+  function scrollBehaviour() {
+    var winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    var height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    $('#myBar').css('width', scrolled + '%');
 
-    function progressBarWidthChange() {
-      var winScroll =
-        document.body.scrollTop || document.documentElement.scrollTop;
-      var height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-      document.getElementById('myBar').style.width = scrolled + '%';
+    if ($(window).scrollTop() > 688) {
+      $(nav).addClass('navColor');
+    } else {
+      $(nav).removeClass('navColor');
     }
   }
 });
