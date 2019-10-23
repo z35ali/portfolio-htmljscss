@@ -57,6 +57,7 @@
   }
 }
 
-.cup h1 {
-  text-align: center;
+.loadingText {
+  position: absolute;
+  right: 41px;
 }
