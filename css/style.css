@@ -39,6 +39,11 @@ body {
   font-size: 40px;
   padding: 20px;
   color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.socialLinks:hover {
+  transform: scale(1.1);
 }
 
 .progress-container {
@@ -107,12 +112,17 @@ body {
 
   left: 2%;
   top: 50%;
-  transform: scaleX(-1);
+  transform: scaleX(-1.05);
   background-image: url(../img/icons/next.png);
 }
 
-.slides-navigation a:hover {
+.slides-navigation a.prev:hover {
   opacity: 1;
+  transform: scale(-1.08);
+}
+.slides-navigation a.next:hover {
+  opacity: 1;
+  transform: scale(1.08);
 }
 .titleMessage {
   position: absolute;
@@ -276,6 +286,7 @@ body {
   -moz-transition: all 0.2s linear, 0.8s;
   -ms-transition: all 0.2s linear, 0.8s;
   -transition: all 0.2s linear, 0.8s;
+  -webkit-filter: blur(0);
 }
 
 .contactButton:hover {
@@ -695,7 +706,11 @@ section {
 }
 
 #downArrow a {
-  padding-top: 60px;
+  padding-top: 68px;
+}
+
+#downArrow:hover {
+  transform: scale(1.05) translateY(2px);
 }
 #downArrow a span {
   position: absolute;
@@ -772,6 +787,10 @@ section {
 
 #upArrow a {
   padding-bottom: 28px;
+}
+
+#upArrow:hover {
+  transform: scale(1.05) translateY(2px);
 }
 #upArrow a span {
   position: absolute;

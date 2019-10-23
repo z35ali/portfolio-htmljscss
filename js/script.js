@@ -29,7 +29,6 @@ $(document).ready(function() {
     pagination: false
   });
   function slideChange(path, color) {
-    $('.main').effect('bounce', { times: 1, distance: 50 }, 1500);
     $('.progress-bar').css({
       background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${path})`
     });
