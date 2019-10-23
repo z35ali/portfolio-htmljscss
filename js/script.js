@@ -29,7 +29,6 @@ $(document).ready(function() {
     pagination: false
   });
   function slideChange(path, color) {
-    $('.main').effect('bounce', { times: 1, distance: 50 }, 1500);
     $('.progress-bar').css({
       background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${path})`
     });
@@ -188,27 +187,21 @@ $(document).ready(function() {
   });
   const nav = $('#navigation');
 
-  $(window).on('scroll', scrollFunctions);
+  $(window).on('scroll', scrollBehaviour);
 
-  function scrollFunctions() {
-    stickyNavigation();
-    progressBarWidthChange();
-    function stickyNavigation() {
-      if ($(window).scrollTop() > 688) {
-        $(nav).addClass('navColor');
-      } else {
-        $(nav).removeClass('navColor');
-      }
-    }
+  function scrollBehaviour() {
+    var winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+    var height =
+      document.documentElement.scrollHeight -
+      document.documentElement.clientHeight;
+    var scrolled = (winScroll / height) * 100;
+    $('#myBar').css('width', scrolled + '%');
 
-    function progressBarWidthChange() {
-      var winScroll =
-        document.body.scrollTop || document.documentElement.scrollTop;
-      var height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-      document.getElementById('myBar').style.width = scrolled + '%';
+    if ($(window).scrollTop() > 688) {
+      $(nav).addClass('navColor');
+    } else {
+      $(nav).removeClass('navColor');
     }
   }
 });
