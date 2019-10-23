@@ -29,9 +29,6 @@ $(document).ready(function() {
     pagination: false
   });
   function slideChange(path, color) {
-    $('.progress-bar').css({
-      background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${path})`
-    });
     $('.skillsSection').css({
       background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${path})`
     });
@@ -190,14 +187,6 @@ $(document).ready(function() {
   $(window).on('scroll', scrollBehaviour);
 
   function scrollBehaviour() {
-    var winScroll =
-      document.body.scrollTop || document.documentElement.scrollTop;
-    var height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-    var scrolled = (winScroll / height) * 100;
-    $('#myBar').css('width', scrolled + '%');
-
     if ($(window).scrollTop() > 688) {
       $(nav).addClass('navColor');
     } else {
