@@ -40,6 +40,13 @@ body {
   overflow: hidden;
 }
 
+.introCol {
+  margin-top: 40px;
+}
+
+.videos {
+  margin-top: -5.5em;
+}
 .socialLinks {
   font-size: 40px;
   padding: 20px;
