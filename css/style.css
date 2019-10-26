@@ -169,7 +169,24 @@ body {
     url('../img/slide1.png');
   color: white;
 }
+.videoContainer {
+  background-color: #252627;
+  background-image: linear-gradient(
+    -45deg,
+    #252627 47%,
+    rgba(255, 255, 255, 0.993) 15%,
+    rgba(255, 255, 255, 0.993) 50%,
+    #252627 50%,
+    #252627 97%,
+    rgba(255, 255, 255, 0.993) 75%,
+    rgba(255, 255, 255, 0.993)
+  );
+  background-size: 30px 30px;
+}
 
+.videos {
+  padding-bottom: 35px;
+}
 .myName {
   float: left;
   margin-left: 50px;
@@ -809,4 +826,13 @@ section {
   -webkit-animation: sdb03 3s infinite;
   animation: sdb03 3s infinite;
   box-sizing: border-box;
+}
+
+.card {
+  width: 600px;
+  height: 200px;
+}
+
+.card-body {
+  padding: 15px;
 }

@@ -32,6 +32,9 @@ $(document).ready(function() {
     $('.skillsSection').css({
       background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${path})`
     });
+    $('.videoSection').css({
+      background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${path})`
+    });
     $('.contactSection').css({
       background: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${path})`
     });
@@ -65,17 +68,17 @@ $(document).ready(function() {
     if (currentslide === 0) {
       slideChange('img/slide1.png', '#1F6490');
     } else if (currentslide === 1) {
-      slideChange('img/slide2.png', '#1B874A');
-    } else if (currentslide === 2) {
-      slideChange('img/slide3.png', '#0b6c59');
-    } else if (currentslide === 3) {
-      slideChange('img/slide4.png', '#673A78');
-    } else if (currentslide === 4) {
-      slideChange('img/slide5.png', '#A18304');
-    } else if (currentslide === 5) {
-      slideChange('img/slide6.png', '#9C5613');
-    } else if (currentslide === 6) {
       slideChange('img/slide7.png', '#9A3126');
+    } else if (currentslide === 2) {
+      slideChange('img/slide2.png', '#1B874A');
+    } else if (currentslide === 3) {
+      slideChange('img/slide3.png', '#0b6c59');
+    } else if (currentslide === 4) {
+      slideChange('img/slide4.png', '#673A78');
+    } else if (currentslide === 5) {
+      slideChange('img/slide5.png', '#A18304');
+    } else if (currentslide === 6) {
+      slideChange('img/slide6.png', '#9C5613');
     }
   });
 
