@@ -11,10 +11,10 @@ $(window).on('load', function() {
     }
   });
   $('.cup')
-    .delay(2800)
+    .delay(2300)
 
-    .fadeOut(2500, function() {
-      $('.loader').fadeOut(800);
+    .fadeOut(200, function() {
+      $('.loader').fadeOut(500);
       $('html').css({
         overflowY: 'scroll'
       });
@@ -169,6 +169,10 @@ $(document).ready(function() {
       },
       'slow'
     );
+  });
+
+  $('.navbar-collapse a').click(function() {
+    $('.navbar-collapse').collapse('hide');
   });
 
   $('#upArrow a').click(function(e) {
