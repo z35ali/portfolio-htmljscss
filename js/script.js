@@ -10,11 +10,10 @@ $(window).on('load', function() {
       queue: false
     }
   });
-  $('.cup')
-    .delay(2300)
+  $('.loadingParent')
+    .delay(500)
 
     .fadeOut(200, function() {
-      $('.loader').fadeOut(500);
       $('html').css({
         overflowY: 'scroll'
       });
@@ -83,7 +82,7 @@ $(document).ready(function() {
   });
 
   var typed = new Typed('.typed', {
-    strings: ['Mobile Developer.', 'Web Developer.', 'Programmer.'],
+    strings: ['Web Developer.', 'Mobile Developer.', 'Programmer.'],
     typeSpeed: 70,
     backSpeed: 35,
     loop: true,
