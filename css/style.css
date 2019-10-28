@@ -14,9 +14,9 @@ body {
 @media (max-width: 767px) {
   .navbar-nav {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #252627;
+
     margin-top: 0.5rem;
-    width: 10rem;
   }
 }
 .social {
@@ -28,7 +28,10 @@ body {
 }
 
 .aboutContainer {
-  padding-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .icon {
@@ -157,7 +160,7 @@ body {
 }
 
 .statsSection {
-  padding: 45px 0px 80px;
+  padding: 80px 0px 80px;
 }
 
 .portfolioSection {
@@ -170,7 +173,6 @@ body {
 }
 .intro {
   padding-top: 10px;
-  margin-left: 50px;
 }
 
 .skillsSection,
@@ -178,6 +180,12 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url('../img/slide1.png');
   color: white;
+}
+
+.aboutSection {
+  /* border-bottom: dashed white;
+  border-top: dashed white;
+  border-width: 1px; */
 }
 .videoContainer {
   display: flex;
@@ -194,8 +202,7 @@ body {
   padding-bottom: 35px;
 }
 .myName {
-  float: left;
-  margin-left: 50px;
+  position: absolute;
 }
 
 .dots {
@@ -205,7 +212,6 @@ body {
 }
 
 .extraIntro {
-  margin-left: 50px;
 }
 
 .skill {
@@ -552,6 +558,9 @@ body {
   }
   .aboutSection {
     padding: 80px 80px 50px 80px;
+  }
+  .aboutContainer {
+    padding-bottom: 40px;
   }
   .videoContainer {
     margin-top: 20px;
