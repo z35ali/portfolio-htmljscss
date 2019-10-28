@@ -10,11 +10,10 @@ $(window).on('load', function() {
       queue: false
     }
   });
-  $('.cup')
-    .delay(2300)
+  $('.loadingParent')
+    .delay(500)
 
     .fadeOut(200, function() {
-      $('.loader').fadeOut(500);
       $('html').css({
         overflowY: 'scroll'
       });
