@@ -336,7 +336,7 @@ html {
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   left: 0;
-  top: 0;
+  bottom: 80px;
   opacity: 0;
   -webkit-transition: all 0.2s linear, 1s;
   -moz-transition: all 0.2s linear, 1s;
@@ -359,15 +359,12 @@ html {
   float: right;
   right: -300px;
 }
-.items .item:hover .openButton {
-  left: 0;
-}
+
 .items .item:hover .projectLink {
   right: 0;
 }
 .items .item:hover .codeLink {
   right: 25px;
-  top: 10px;
 }
 .items .item:hover img {
   -webkit-transform: scale(1.05, 1.05);
@@ -379,6 +376,22 @@ html {
 .items {
   padding: 0;
 }
+.descriptionOverlay {
+  display: flex;
+  position: absolute;
+  background: rgba(37, 38, 39, 0.9);
+  color: white;
+  bottom: 0;
+  margin: 0 0 0 0px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+  height: 80px;
+  width: 100%;
+  transition: all 0.2s linear, 0.5s;
+}
+
 .copyrightSection {
   background-color: #000;
   color: #fff;
@@ -416,6 +429,13 @@ html {
   }
   .navbar-expand-md .navbar-nav {
     align-items: center;
+  }
+  .descriptionOverlay {
+    opacity: 0%;
+  }
+
+  .item:hover .descriptionOverlay {
+    opacity: 100%;
   }
 }
 #navigation li {

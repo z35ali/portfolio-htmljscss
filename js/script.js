@@ -18,6 +18,8 @@ $(window).on('load', function() {
         overflowY: 'scroll'
       });
     });
+
+  AOS.refresh();
 });
 
 $(document).ready(function() {
@@ -130,7 +132,6 @@ $(document).ready(function() {
 
     var selector = $(this).attr('data-filter');
 
-    //click element
     $('.items').isotope({
       filter: selector,
       animationOptions: {
