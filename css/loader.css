@@ -3,8 +3,8 @@
   height: 100%;
   background-color: #252627;
   position: fixed;
-  top: 0px;
-  left: 0px;
+  top: 0;
+  left: 0;
   z-index: 1000;
 }
 .loading {
@@ -19,7 +19,7 @@
 .obj {
   width: 6px;
   height: 40px;
-  background: url('../img/slide1.png');
+  background: url(../img/slide1.png);
   margin: 0 3px;
   border-radius: 10px;
   animation: loading 0.8s infinite;
@@ -45,7 +45,6 @@
 .obj:nth-child(8) {
   animation-delay: 0.7s;
 }
-
 @keyframes loading {
   0% {
     height: 0;
