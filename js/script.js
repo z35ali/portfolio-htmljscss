@@ -24,7 +24,7 @@ $(window).on('load', function() {
 
 $(document).ready(function() {
   $('.main').effect('bounce', { times: 1, distance: 50 }, 3500);
-  $('#slides').superslides({
+  $('#home').superslides({
     animation: 'fade',
     play: false,
     pagination: false

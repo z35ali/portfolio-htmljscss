@@ -1,10 +1,10 @@
-#slides {
+#home {
   position: relative;
 }
-#slides .slides-container {
+#home .slides-container {
   display: none;
 }
-#slides .scrollable {
+#home .scrollable {
   *zoom: 1;
   position: relative;
   top: 0;
@@ -13,8 +13,8 @@
   -webkit-overflow-scrolling: touch;
   height: 100%;
 }
-#slides .scrollable:after {
-  content: "";
+#home .scrollable:after {
+  content: '';
   display: table;
   clear: both;
 }
@@ -55,7 +55,7 @@
   *vertical-align: auto;
   zoom: 1;
   *display: inline;
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=");
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=');
   margin: 2px;
   overflow: hidden;
   text-indent: -100%;
