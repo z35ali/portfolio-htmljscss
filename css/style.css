@@ -425,7 +425,7 @@ html {
     background-color: #222324;
   }
   .aboutSection {
-    padding: 85px 80px 44px 80px;
+    padding: 85px 80px 0px 80px;
   }
   .navbar-expand-md .navbar-nav {
     align-items: center;
@@ -458,7 +458,7 @@ html {
     left: 0;
   }
   .aboutSection {
-    padding: 80px 80px 50px 80px;
+    padding: 80px 80px 0px 80px;
   }
   .aboutContainer {
     padding-bottom: 40px;
@@ -477,7 +477,7 @@ html {
     left: 0;
   }
   .aboutSection {
-    padding: 80px 80px 50px 80px;
+    padding: 80px 80px 0px 80px;
   }
 }
 #navigation li a {
