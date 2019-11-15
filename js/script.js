@@ -2,13 +2,7 @@ $(window).on('load', function() {
   $('html').css({
     overflowY: 'hidden'
   });
-  $('.items').isotope({
-    animationOptions: {
-      duration: 1500,
-      easing: 'linear',
-      queue: false
-    }
-  });
+
   $('.loadingParent')
     .delay(500)
 
@@ -116,75 +110,73 @@ $(document).ready(function() {
 
   $('[data-fancybox]').fancybox();
 
+  var selector = $(this).attr('data-filter');
 
-    var selector = $(this).attr('data-filter');
-
-    $('.items').isotope({
-      filter: selector,
-      animationOptions: {
-        duration: 1500,
-        easing: 'linear',
-        queue: false
-      }
-    });
-    return false;
-  });
-
-  $('#navigation a').click(function(e) {
-    if ($('.navLink').hasClass('.resume')) {
-      e.preventDefault(); //do not go directly to section
+  $('.items').isotope({
+    filter: selector,
+    animationOptions: {
+      duration: 1500,
+      easing: 'linear',
+      queue: false
     }
-
-    var targetElement = $(this).attr('href');
-    var targetPosition = $(targetElement).offset().top;
-    $('html, body').animate(
-      {
-        scrollTop: targetPosition - 75
-      },
-      'slow'
-    );
   });
-
-  $('#downArrow a').click(function(e) {
-    e.preventDefault(); //do not go directly to section
-
-    var targetElement = $(this).attr('href');
-    var targetPosition = $(targetElement).offset().top;
-    $('html, body').animate(
-      {
-        scrollTop: targetPosition - 75
-      },
-      'slow'
-    );
-  });
-
-  $('.navbar-collapse a').click(function() {
-    $('.navbar-collapse').collapse('hide');
-  });
-
-  $('#upArrow a').click(function(e) {
-    e.preventDefault(); //do not go directly to section
-
-    var targetElement = $(this).attr('href');
-    var targetPosition = $(targetElement).offset().top;
-
-    $('html, body').animate(
-      {
-        scrollTop: targetPosition
-      },
-      'slow'
-    );
-    $('.main').effect('bounce', { times: 1, distance: 50 }, 2000);
-  });
-  const nav = $('#navigation');
-
-  $(window).on('scroll', scrollBehaviour);
-
-  function scrollBehaviour() {
-    if ($(window).scrollTop() > 688) {
-      $(nav).addClass('navColor');
-    } else {
-      $(nav).removeClass('navColor');
-    }
-  }
+  return false;
 });
+
+$('#navigation a').click(function(e) {
+  if ($('.navLink').hasClass('.resume')) {
+    e.preventDefault(); //do not go directly to section
+  }
+
+  var targetElement = $(this).attr('href');
+  var targetPosition = $(targetElement).offset().top;
+  $('html, body').animate(
+    {
+      scrollTop: targetPosition - 75
+    },
+    'slow'
+  );
+});
+
+$('#downArrow a').click(function(e) {
+  e.preventDefault(); //do not go directly to section
+
+  var targetElement = $(this).attr('href');
+  var targetPosition = $(targetElement).offset().top;
+  $('html, body').animate(
+    {
+      scrollTop: targetPosition - 75
+    },
+    'slow'
+  );
+});
+
+$('.navbar-collapse a').click(function() {
+  $('.navbar-collapse').collapse('hide');
+});
+
+$('#upArrow a').click(function(e) {
+  e.preventDefault(); //do not go directly to section
+
+  var targetElement = $(this).attr('href');
+  var targetPosition = $(targetElement).offset().top;
+
+  $('html, body').animate(
+    {
+      scrollTop: targetPosition
+    },
+    'slow'
+  );
+  $('.main').effect('bounce', { times: 1, distance: 50 }, 2000);
+});
+const nav = $('#navigation');
+
+$(window).on('scroll', scrollBehaviour);
+
+function scrollBehaviour() {
+  if ($(window).scrollTop() > 688) {
+    $(nav).addClass('navColor');
+  } else {
+    $(nav).removeClass('navColor');
+  }
+}
