@@ -3,7 +3,6 @@ $(window).on('load', function() {
     overflowY: 'hidden'
   });
   $('.items').isotope({
-    filter: '.website',
     animationOptions: {
       duration: 1500,
       easing: 'linear',
@@ -67,9 +66,9 @@ $(document).ready(function() {
     numberofslides = $('#home').superslides('size');
     currentslide = $('#home').superslides('current');
     if (currentslide === 0) {
-      slideChange('img/slide1.png', '#1F6490');
-    } else if (currentslide === 1) {
       slideChange('img/slide7.png', '#9A3126');
+    } else if (currentslide === 1) {
+      slideChange('img/slide1.png', '#1F6490');
     } else if (currentslide === 2) {
       slideChange('img/slide2.png', '#1B874A');
     } else if (currentslide === 3) {
@@ -83,14 +82,6 @@ $(document).ready(function() {
     }
   });
 
-  var typed = new Typed('.typed', {
-    strings: ['Web Developer.', 'Mobile Developer.', 'Programmer.'],
-    typeSpeed: 70,
-    backSpeed: 35,
-    loop: true,
-    startDelay: 1000,
-    showCursor: false
-  });
   var typed2 = new Typed('.myName', {
     strings: ["I'm Zafar Ali..."],
     typeSpeed: 100,
