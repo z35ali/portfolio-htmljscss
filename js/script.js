@@ -22,7 +22,6 @@ $(window).on('load', function() {
 });
 
 $(document).ready(function() {
-  $('.main').effect('bounce', { times: 1, distance: 50 }, 3500);
   $('#home').superslides({
     animation: 'fade',
     play: false,
@@ -117,9 +116,6 @@ $(document).ready(function() {
 
   $('[data-fancybox]').fancybox();
 
-  $('#filters a').click(function() {
-    $('#filters .current').removeClass('current');
-    $(this).addClass('current');
 
     var selector = $(this).attr('data-filter');
 
