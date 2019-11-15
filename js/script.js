@@ -64,8 +64,8 @@ $(document).ready(function() {
     );
   }
   $(document).on('animated.slides', function() {
-    numberofslides = $('#slides').superslides('size');
-    currentslide = $('#slides').superslides('current');
+    numberofslides = $('#home').superslides('size');
+    currentslide = $('#home').superslides('current');
     if (currentslide === 0) {
       slideChange('img/slide1.png', '#1F6490');
     } else if (currentslide === 1) {
