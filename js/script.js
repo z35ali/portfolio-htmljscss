@@ -2,7 +2,14 @@ $(window).on('load', function() {
   $('html').css({
     overflowY: 'hidden'
   });
-
+  $('.items').isotope({
+    filter: '.website',
+    animationOptions: {
+      duration: 1500,
+      easing: 'linear',
+      queue: false
+    }
+  });
   $('.loadingParent')
     .delay(500)
 
