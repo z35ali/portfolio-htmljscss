@@ -140,13 +140,14 @@ html {
 .portfolioSection {
   padding: 40px 0 60px;
 }
+
 .intro {
   padding-top: 10px;
 }
 .contactSection,
 .skillsSection {
   background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(../img/slide1.png);
+    url(../img/slide7.png);
   color: #fff;
 }
 .videoContainer {
@@ -279,7 +280,7 @@ html {
 }
 .portfolioSection .heading {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 45px;
   width: 100%;
 }
 .items li {
