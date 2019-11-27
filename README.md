@@ -1,2 +1,3 @@
-# portfolio-htmljscss
-My portfolio website showcasing my skills and projects.
+# PortFolio_Website
+
+## To execute this project just open index.html file in the browser.
