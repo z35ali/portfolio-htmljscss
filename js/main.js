@@ -27,15 +27,27 @@ $(document).ready(function() {
       'slow'
     );
   });
+
   $('#navbarNav a').click(function(e) {
     var targetElement = $(this).attr('href');
     var targetPosition = $(targetElement).offset().top;
-    $('html, body').animate(
-      {
-        scrollTop: targetPosition - 75
-      },
-      'slow'
-    );
+
+    let scroll = $(window).scrollTop();
+    if (scroll >= nav_offset_top) {
+      $('html, body').animate(
+        {
+          scrollTop: targetPosition - 75
+        },
+        'fast'
+      );
+    } else {
+      $('html, body').animate(
+        {
+          scrollTop: targetPosition - 163
+        },
+        'fast'
+      );
+    }
   });
 
   $(document).on('click', '.nav-item a', function(e) {
@@ -46,7 +58,16 @@ $(document).ready(function() {
       .removeClass('active');
   });
 
-  $(window).scroll(function() {
+  $(document).scroll(function() {
+    /* Active nav behaviour */
+    $('.navbar-nav').click(function() {
+      $(this).addClass('active');
+      $('.navbar-nav')
+        .not(this)
+        .removeClass('active');
+    });
+
+    /* Scroll to top button behaviour*/
     if ($(this).scrollTop() > 135) {
       $('.gotopbtn').css({
         opacity: '1.0'
@@ -57,9 +78,45 @@ $(document).ready(function() {
       });
     }
   });
-});
 
-/**Collapse Nav on mobile when clicking link */
-$('.navbar-collapse a').click(function() {
-  $('.navbar-collapse').collapse('hide');
+  /*Scrolling highlight the active nav item */
+  $(window).scroll(function(event) {
+    var scrollHeight = $(document).height();
+    var scrollPosition = $(window).height() + $(window).scrollTop();
+    var scrollPos = $(document).scrollTop() + 76;
+    if ($(document).scrollTop() === 0) {
+      $('a[href^="#home"]')
+        .parent('li')
+        .addClass('active')
+        .siblings()
+        .removeClass('active');
+      return;
+    } else if (scrollPosition >= scrollHeight) {
+      $('a[href^="#contact"]')
+        .parent('li')
+        .addClass('active')
+        .siblings()
+        .removeClass('active');
+      return;
+    }
+
+    $('.nav-item a').each(function() {
+      var currLink = $(this);
+      var refElement = $(currLink.attr('href'));
+      if (
+        refElement.position().top <= scrollPos &&
+        refElement.position().top + refElement.height() > scrollPos
+      ) {
+        $('.nav-item').removeClass('active');
+        currLink.parent().addClass('active');
+      } else {
+        currLink.parent().removeClass('active');
+      }
+    });
+  });
+
+  /**Collapse Nav on mobile when clicking link */
+  $('.navbar-collapse a').click(function() {
+    $('.navbar-collapse').collapse('hide');
+  });
 });
