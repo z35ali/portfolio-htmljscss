@@ -83,7 +83,7 @@ $(document).ready(function() {
   $(window).scroll(function(event) {
     var scrollHeight = $(document).height();
     var scrollPosition = $(window).height() + $(window).scrollTop();
-    var scrollPos = $(document).scrollTop() + 76;
+    var scrollPos = $(document).scrollTop() + 75;
     if ($(document).scrollTop() === 0) {
       $('a[href^="#home"]')
         .parent('li')
@@ -91,7 +91,7 @@ $(document).ready(function() {
         .siblings()
         .removeClass('active');
       return;
-    } else if (scrollPosition >= scrollHeight) {
+    } else if (scrollPosition >= scrollHeight - 100) {
       $('a[href^="#contact"]')
         .parent('li')
         .addClass('active')
