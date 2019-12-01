@@ -5,7 +5,7 @@
   .site-main .subscribe-us-area .subscribe .subscribe-title,
   .site-main .subscribe-us-area .subscribe .subscribe-title p,
   h4,
-  .site-main .services-area,
+  .site-main .languages-area,
   .site-main .subscribe-us-area .subscribe {
     padding: 2%;
     margin: 0%;
@@ -19,7 +19,7 @@
     width: 15rem !important;
   }
 
-  .site-main > .services-area .services {
+  .site-main > .languages-area .languages {
     width: 13rem;
   }
 }
@@ -70,7 +70,7 @@
   }
 
   .site-main .brand-area,
-  .site-main .services-area .services-title,
+  .site-main .languages-area .languages-title,
   .site-main .about-area {
     padding: 3% 4%;
   }
@@ -87,5 +87,18 @@
   }
   .col-lg-4 {
     width: 28.75% !important;
+  }
+}
+
+/** For screens 991px width and under have no padding on avatar img and add margin to download resume button **/
+@media (max-width: 991px) {
+  .site-main .site-banner .banner-image > img {
+    padding-bottom: 0;
+  }
+  .site-main .about-area {
+    padding: 0;
+  }
+  #downloadResumeButton {
+    margin-bottom: 50px;
   }
 }
