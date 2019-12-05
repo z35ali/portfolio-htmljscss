@@ -476,7 +476,7 @@ footer.footer-area .social h5 {
 
 footer.footer-area .social a > i {
   font-size: 22px;
-  padding: 2rem;
+  margin: 2rem;
   /* color: var(--border-color); */
   color: white;
 }
@@ -499,19 +499,18 @@ html {
 
 .gotopbtn {
   position: fixed;
+  display: inline-block;
   width: 50px;
   height: 50px;
   background: var(--primary-color);
   bottom: 40px;
   right: 50px;
-
   text-decoration: none;
   text-align: center;
   line-height: 50px;
   color: white;
   font-size: 22px;
   z-index: 99999;
-  opacity: 0;
 }
 
 .gotopbtn:hover {
