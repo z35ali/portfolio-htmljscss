@@ -88,3 +88,9 @@ button:active button:hover .btn:active,
   z-index: 999;
   transition: background 1s ease;
 }
+
+.navbar_fixed_hide {
+  box-shadow: none;
+  z-index: 999;
+  transition: background 1s ease;
+}
