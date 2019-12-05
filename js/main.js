@@ -18,7 +18,7 @@ $(document).ready(function() {
   }
 
   navbarFixed();
-  $('#projectsButton a').click(function(e) {
+  $('#projectsButton').click(function(e) {
     e.preventDefault();
     var targetElement = $(this).attr('href');
     var targetPosition = $(targetElement).offset().top;
