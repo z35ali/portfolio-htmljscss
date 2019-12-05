@@ -19,6 +19,7 @@ $(document).ready(function() {
 
   navbarFixed();
   $('#projectsButton a').click(function(e) {
+    e.preventDefault();
     var targetElement = $(this).attr('href');
     var targetPosition = $(targetElement).offset().top;
     $('html, body').animate(
@@ -29,7 +30,7 @@ $(document).ready(function() {
     );
   });
 
-  $('.navbar-brand, #navbarNav a').click(function(e) {
+  $('.navbar-brand, #navbarNav a, #name, .gotopbtn').click(function(e) {
     e.preventDefault();
     var targetElement = $(this).attr('href');
     var targetPosition = $(targetElement).offset().top;
