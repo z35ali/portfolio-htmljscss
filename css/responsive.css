@@ -98,7 +98,7 @@
   .site-main .about-area {
     padding: 0;
   }
-  #downloadResumeButton {
-    margin-bottom: 50px;
+  .video-slider {
+    margin-top: 50px !important;
   }
 }
