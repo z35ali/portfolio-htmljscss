@@ -24,6 +24,10 @@
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap toggle-->
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -34,8 +38,16 @@
 
     <header class="header_area">
         <div class="main-menu navbar_fixed navbar_fixed_hide" id="main_menu">
+            
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a class="navbar-brand" href="#home">Zafar Ali</a>
+                <div class="checkbox switcher">
+                        <label for="darkModeToggle">
+                          <input type="checkbox" id="darkModeToggle">
+                          <span><small></small></span>
+                          <small class='darkModeText'>Dark Mode</small>
+                        </label>
+                      </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -87,12 +99,16 @@
                             <div class="d-flex flex-row flex-wrap">
                              <a class="customButtonPrimary" id="projectsButton" href="#projects">See Projects</a>
                             <a class="customButton" target="_blank" href="https://drive.google.com/file/d/1H1w7We2jLINgDtlrx7DIrPUij4QKP8N5/view">Resume</a>
-                            </div>
+                          
                         </div>
+                        </div>
+                       
                     </div>
+                    
                     <div class="col-lg-6 col-md-12 banner-image">
                         <img src="./img/avatar-1.png" alt="banner-img" class="img-fluid">
                     </div>
+                   
                 </div>
             </div>
         </section>
@@ -166,7 +182,7 @@
                                 </div>
                                 <div class="card-body text-center">
                                     <h5 class="card-title text-uppercase font-roboto">Front End</h5>
-                                    <div class="card-text text-secondary">
+                                    <div class="card-text textSecondary">
                                       <ul>
                                             <li>HTML5</li>
                                             <li>CSS3 | SASS</li>
@@ -185,7 +201,7 @@
                                 </div>
                                 <div class="card-body text-center">
                                     <h5 class="card-title text-uppercase font-roboto">Server</h5>
-                                    <div class="card-text text-secondary">
+                                    <div class="card-text textSecondary">
                                             <ul>
                                                 <li>NodeJS</li>
                                                 <li>Express</li>
@@ -204,7 +220,7 @@
                                 </div>
                                 <div class="card-body text-center">
                                     <h5 class="card-title text-uppercase font-roboto">Databases</h5>
-                                    <div class="card-text text-secondary">
+                                    <div class="card-text textSecondary">
                                             <ul>
                                                 <li>SQL</li>
                                                 <li>MongoDB</li>
@@ -223,7 +239,7 @@
                                 </div>
                                 <div class="card-body text-center">
                                     <h5 class="card-title text-uppercase font-roboto">Deployment</h5>
-                                    <div class="card-text text-secondary">
+                                    <div class="card-text textSecondary">
                                             <ul>
                                               
                                                 <li>Digital Ocean</li>
@@ -264,7 +280,7 @@
                                     </div>
                                     <div class="card-body text-center">
                                         <h5 class="card-title text-uppercase font-roboto">Responsive Web Design</h5>
-                                        <p class="card-text text-secondary">
+                                        <p class="card-text textSecondary">
                                             Ability to develop web applications for a variety of devices and screen sizes.
                                         </p>
                                     </div>
@@ -277,7 +293,7 @@
                                     </div>
                                     <div class="card-body text-center">
                                         <h5 class="card-title text-uppercase font-roboto">Agile Method</h5>
-                                        <p class="card-text text-secondary">
+                                        <p class="card-text textSecondary">
                                           Knowledge and experience in scrum meetings, sprints, and backlogs in order to develop a quality product that meets use cases.
                                         </p>
                                     </div>
@@ -290,7 +306,7 @@
                                     </div>
                                     <div class="card-body text-center">
                                         <h5 class="card-title text-uppercase font-roboto">Version Control via GIT/GitHub</h5>
-                                        <p class="card-text text-secondary">
+                                        <p class="card-text textSecondary">
                                            Host repositories on GitHub and GIT version control in order to collaborate with teammates on a large project.
                                         </p>
                                     </div>
@@ -303,7 +319,7 @@
                                     </div>
                                     <div class="card-body text-center">
                                         <h5 class="card-title text-uppercase font-roboto">Data Structures</h5>
-                                        <p class="card-text text-secondary">
+                                        <p class="card-text textSecondary">
                                            Knowledgeable in programming best practices and paradigms.
                                     </div>
                                 </div>
@@ -584,6 +600,9 @@
     <script src="./js/main.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap toggle file-->
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
 
 
 

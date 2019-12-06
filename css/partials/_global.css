@@ -84,13 +84,11 @@ button:active button:hover .btn:active,
   left: 0;
   right: 0;
   background: #ffffff;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--nav-shadow);
   z-index: 999;
-  transition: background 1s ease;
 }
 
 .navbar_fixed_hide {
   box-shadow: none;
   z-index: 999;
-  transition: background 1s ease;
 }
