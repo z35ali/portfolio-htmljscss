@@ -102,3 +102,10 @@
     margin-top: 50px !important;
   }
 }
+
+/** Fix buttons on home section for screens <485px **/
+@media (max-width: 485px) {
+  .customButton {
+    margin-top: 30px;
+  }
+}
