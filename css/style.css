@@ -29,7 +29,7 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   padding-bottom: 5px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--title-color);
 }
 
 .header_area .main-menu .navbar-nav a:hover {
@@ -40,8 +40,12 @@
 }
 
 .navbar-brand {
-  /* font: normal 500 15px/2px var(--font); */
+  color: var(--title-color) !important;
   font-size: 1.8rem;
+}
+
+#main_menu {
+  background: var(--background-color);
 }
 
 /* end navigation */
@@ -50,7 +54,6 @@
 
 .site-main .site-banner {
   padding-top: 100px;
-  background: url(../img/banner/home-banner.png) no-repeat 0% 50%;
 }
 
 .site-main .site-banner .site-title h3 {
@@ -170,7 +173,7 @@
 }
 
 .site-main > .languages-area .languages {
-  background: rgba(248, 252, 253, 0.973);
+  background: var(--box-color);
   padding: 2rem 0;
   width: 16rem;
   margin: 5rem 0.5rem;
@@ -188,6 +191,9 @@ ul {
   margin: 0;
 }
 
+.textSecondary {
+  color: var(--text-secondary);
+}
 /* End languages Area */
 
 /* Skills area */
@@ -210,7 +216,7 @@ ul {
 }
 
 .site-main > .skills-area .skills {
-  background: rgba(248, 252, 253, 0.973);
+  background: var(--box-color);
   padding: 2rem 0;
   width: 16rem;
   margin: 5rem 0.5rem;
@@ -463,4 +469,57 @@ html {
 
 .gotopbtn:hover {
   color: white;
+}
+
+/** Dark Theme Toggle **/
+div.checkbox.switcher label,
+div.radio.switcher label {
+  padding: 0;
+  padding-top: 10px;
+}
+div.checkbox.switcher label *,
+div.radio.switcher label * {
+  vertical-align: middle;
+}
+div.checkbox.switcher label input,
+div.radio.switcher label input {
+  display: none;
+}
+div.checkbox.switcher label input + span,
+div.radio.switcher label input + span {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+  width: 56px;
+  height: 28px;
+  background: #f2f2f2;
+  border: 1px solid #eee;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+div.checkbox.switcher label input + span small,
+div.radio.switcher label input + span small {
+  position: absolute;
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  left: 0;
+}
+div.checkbox.switcher label input:checked + span,
+div.radio.switcher label input:checked + span {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+div.checkbox.switcher label input:checked + span small,
+div.radio.switcher label input:checked + span small {
+  left: 50%;
+}
+
+.darkModeText {
+  font-size: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
 }
