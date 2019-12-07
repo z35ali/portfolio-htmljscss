@@ -65,7 +65,7 @@ $(document).ready(function() {
     }
   });
 
-  /*Scrolling highlight the active nav item */
+  /* Scrolling highlight the active nav item */
   $(window).scroll(function(event) {
     var scrollHeight = $(document).height();
     var scrollPosition = $(window).height() + $(window).scrollTop();
@@ -101,11 +101,12 @@ $(document).ready(function() {
     });
   });
 
-  /**Collapse Nav on mobile when clicking link */
+  /* Collapse Nav on mobile when clicking link */
   $('.navbar-collapse a').click(function() {
     $('.navbar-collapse').collapse('hide');
   });
 
+  /* Dark Mode Toggle CSS variable changes*/
   $('#darkModeToggle').click(function() {
     if ($('#darkModeToggle').is(':checked')) {
       $(':root')
