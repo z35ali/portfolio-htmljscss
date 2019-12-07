@@ -109,3 +109,12 @@
     margin-top: 30px;
   }
 }
+
+@media (max-width: 440px) {
+  .skills-area .container,
+  .languages-area .container {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
