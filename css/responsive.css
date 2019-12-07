@@ -110,6 +110,7 @@
   }
 }
 
+/** Fix centering of skills and language tiles on smaller screens**/
 @media (max-width: 440px) {
   .skills-area .container,
   .languages-area .container {
