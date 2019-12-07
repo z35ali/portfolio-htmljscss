@@ -300,6 +300,10 @@ ul {
 
 /* Project Area */
 
+.pb-5,
+.py-5 {
+  padding-bottom: 1rem !important;
+}
 .site-main .project-area {
   padding: 5rem 0;
 }
@@ -330,7 +334,6 @@ ul {
 
 .items {
   display: flex;
-
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
