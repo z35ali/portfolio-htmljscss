@@ -523,6 +523,10 @@ div.radio.switcher label input:checked + span small {
   text-align: center;
 }
 
+.togglerSpan:hover {
+  cursor: pointer;
+}
+
 .leftNav {
   display: flex;
   flex-direction: row wrap;
