@@ -90,7 +90,7 @@
   }
 }
 
-/** For screens 991px width and under have no padding on avatar img and add margin to download resume button **/
+/** For screens 991px width and under have different spacing between elements **/
 @media (max-width: 991px) {
   .site-main .site-banner .banner-image > img {
     padding-bottom: 0;
@@ -100,6 +100,13 @@
   }
   .video-slider {
     margin-top: 50px !important;
+  }
+
+  .site-main .project-area {
+    padding-top: 5rem;
+  }
+  .site-main .about-area {
+    padding-top: 2rem;
   }
 }
 
