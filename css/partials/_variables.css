@@ -12,8 +12,7 @@ body {
 :root {
   --background-color: white;
   --color: black;
-  --primary-color: #b73326;
-  --primary-color2: #de4536;
+  --primary-color: #1d6ba2;
   --title-color: black;
   --text-color: #777777;
   --text-secondary: #6c757d;
@@ -22,7 +21,7 @@ body {
   --gradient-color: linear-gradient(
     90deg,
     var(--primary-color) 0%,
-    var(--primary-color2) 100%
+    var(--primary-color) 100%
   );
   --shadow-color: 0px 10px 30px rgba(118, 85, 225, 0.3);
   --box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
