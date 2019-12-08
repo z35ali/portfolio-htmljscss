@@ -296,6 +296,16 @@ ul {
   box-shadow: var(--box-shadow);
 }
 
+.services-img i {
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+
+.skills-img i {
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+
 /* End skills area */
 
 /* Project Area */
@@ -448,6 +458,7 @@ ul {
 
 .site-main .about-area {
   padding-top: 2rem !important;
+  padding-bottom: 5rem !important;
 }
 
 .site-main .about-area .about-title p {
