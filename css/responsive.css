@@ -110,7 +110,7 @@
 }
 
 /** Fix buttons on home section for screens <485px **/
-@media (max-width: 485px) {
+@media (max-width: 500px) {
   .customButton {
     margin-top: 30px;
   }
@@ -123,5 +123,15 @@
     max-width: 100% !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
+  }
+}
+
+/** Fix overlapping divs **/
+@media (min-width: 991px) and (max-width: 1384px) {
+  .site-main > .languages-area .languages {
+    width: 11rem;
+  }
+  .site-main > .skills-area .skills {
+    width: 11rem;
   }
 }
