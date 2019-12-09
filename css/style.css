@@ -562,6 +562,7 @@ html {
   color: white;
   font-size: 22px;
   z-index: 99999;
+  display: none;
 }
 
 .gotopbtn:hover {
