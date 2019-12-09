@@ -220,6 +220,20 @@ div.radio.switcher label input:checked + span small {
   color: var(--primary-color);
 }
 
+.videoWrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+.videoWrapper2 {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.video1 {
+  margin-bottom: 0.5rem;
+}
 /* End About Area */
 
 /* languages Area */
