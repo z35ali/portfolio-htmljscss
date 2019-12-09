@@ -69,7 +69,7 @@ $(document).ready(function() {
   $(window).scroll(function(event) {
     var scrollHeight = $(document).height();
     var scrollPosition = $(window).height() + $(window).scrollTop();
-    var scrollPos = $(document).scrollTop() + SECTION_PADDING;
+    var scrollPos = $(document).scrollTop() + 2;
     if ($(document).scrollTop() === 0) {
       $('a[href^="#home"]')
         .parent('li')
@@ -95,8 +95,6 @@ $(document).ready(function() {
       ) {
         $('.nav-item').removeClass('active');
         currLink.parent().addClass('active');
-      } else {
-        currLink.parent().removeClass('active');
       }
     });
   });
