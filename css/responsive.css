@@ -102,9 +102,6 @@
   .site-title {
     text-align: center;
   }
-  .site-main .site-banner .site-title h3 {
-    padding-top: 20%;
-  }
 }
 
 /** For screens 991px width and under have different spacing between elements **/
@@ -123,6 +120,12 @@
   .site-buttons {
     display: flex;
     justify-content: center;
+  }
+}
+
+@media (max-width: 887px) {
+  .site-main .site-banner {
+    padding-top: 160px;
   }
 }
 
