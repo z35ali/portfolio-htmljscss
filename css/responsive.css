@@ -90,13 +90,15 @@
   }
 }
 
-/** For screens 991px width and under have different spacing between elements **/
-@media (max-width: 991px) {
+@media (max-width: 767px) {
   .site-main .site-banner .banner-image > img {
     padding: 0;
-    padding-top: 12rem;
+    padding-top: 16rem;
   }
+}
 
+/** For screens 991px width and under have different spacing between elements **/
+@media (max-width: 991px) {
   .video-slider {
     margin-top: 50px !important;
   }
@@ -110,10 +112,7 @@
 }
 
 /** Fix buttons on home section for screens <485px **/
-@media (max-width: 500px) {
-  .customButton {
-    margin-top: 30px;
-  }
+@media (max-width: 765px) {
 }
 
 /** Fix centering of skills and language tiles on smaller screens**/
