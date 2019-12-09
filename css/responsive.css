@@ -93,7 +93,7 @@
 @media (max-width: 767px) {
   .site-main .site-banner .banner-image > img {
     padding: 0;
-    padding-top: 16rem;
+    padding-top: 14rem;
   }
 }
 
@@ -109,10 +109,6 @@
   .site-main .about-area {
     padding-top: 0rem;
   }
-}
-
-/** Fix buttons on home section for screens <485px **/
-@media (max-width: 765px) {
 }
 
 /** Fix centering of skills and language tiles on smaller screens**/
