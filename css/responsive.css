@@ -146,6 +146,10 @@
     padding: 0 2rem 0 0rem;
     font-family: var(--font_name);
   }
+
+  #colorPicker {
+    margin-left: 30px;
+  }
 }
 
 /** Fix overlapping divs **/
