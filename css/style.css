@@ -126,7 +126,7 @@ div.radio.switcher label input:checked + span small {
   border-radius: 10px;
   width: 40px;
   height: 20px;
-  margin-left: 50px;
+  margin: 0 50px;
 }
 #colorPicker::-webkit-color-swatch {
   border: none;
