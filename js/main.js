@@ -3,6 +3,14 @@ $(document).ready(function() {
   let nav_offset_top = $('.header_area').height() + 50;
   const SECTION_PADDING = 75;
 
+  $('#colorPicker').attr(
+    'value',
+    window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue('--primary-color')
+      .trim()
+  );
+
   function navbarFixed() {
     if ($('.header_area').length) {
       $(window).scroll(function() {
@@ -27,6 +35,12 @@ $(document).ready(function() {
       },
       'slow'
     );
+  });
+
+  $('#colorPicker').change(function(e) {
+    $(':root')
+      .get(0)
+      .style.setProperty('--primary-color', $('input#colorPicker').val());
   });
 
   $('.navbar-brand, #navbarNav a, #name, .gotopbtn').click(function(e) {

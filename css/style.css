@@ -117,6 +117,33 @@ div.radio.switcher label input:checked + span small {
 
 /** End of Dark Theme Toggle **/
 
+/** Color Picker **/
+
+#colorPicker {
+  -webkit-appearance: none;
+  padding: 0;
+  border: none;
+  border-radius: 10px;
+  width: 40px;
+  height: 20px;
+  margin-left: 50px;
+}
+#colorPicker::-webkit-color-swatch {
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+}
+#colorPicker::-webkit-color-swatch-wrapper {
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+}
+#colorPicker:focus {
+  outline: 0;
+}
+
+/** End of Color Picker **/
+
 /* end navigation */
 
 /* Banner Area */
