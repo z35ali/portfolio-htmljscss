@@ -141,6 +141,11 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
+
+  .header_area .main-menu .navbar .navbar-brand {
+    padding: 0 2rem 0 0rem;
+    font-family: var(--font_name);
+  }
 }
 
 /** Fix overlapping divs **/
