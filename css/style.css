@@ -142,6 +142,10 @@ div.radio.switcher label input:checked + span small {
   outline: 0;
 }
 
+#colorPicker:hover {
+  cursor: pointer;
+}
+
 /** End of Color Picker **/
 
 /* end navigation */
