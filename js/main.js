@@ -15,7 +15,7 @@ $(document).ready(function() {
     if ($('.header_area').length) {
       $(window).scroll(function() {
         let scroll = $(window).scrollTop();
-        if (scroll >= nav_offset_top) {
+        if (scroll >= nav_offset_top + 600) {
           $('.header_area .main-menu').removeClass('navbar_fixed_hide');
         } else {
           $('.header_area .main-menu').addClass('navbar_fixed_hide');
@@ -24,7 +24,68 @@ $(document).ready(function() {
     }
   }
 
+  function darkModeCSS() {
+    if ($('#darkModeToggle').is(':checked')) {
+      $(':root')
+        .get(0)
+        .style.setProperty('--background-color', '#333333');
+      $(':root')
+        .get(0)
+        .style.setProperty('--color', 'snow');
+      $(':root')
+        .get(0)
+        .style.setProperty('--title-color', 'snow');
+      $(':root')
+        .get(0)
+        .style.setProperty('--text-color', 'rgba(255, 255, 255, 0.762)');
+      $(':root')
+        .get(0)
+        .style.setProperty('--box-color', '#35383b');
+      $(':root')
+        .get(0)
+        .style.setProperty('--text-secondary', 'rgba(255, 255, 255, 0.762)');
+      $(':root')
+        .get(0)
+        .style.setProperty(
+          '--box-shadow',
+          ' 0px 10px 30px rgba(255,255,255, 0.205)'
+        );
+      $(':root')
+        .get(0)
+        .style.setProperty(
+          '--nav-shadow',
+          ' 0px 10px 30px rgba(255,255,255, 0.03)'
+        );
+    } else {
+      $(':root')
+        .get(0)
+        .style.setProperty('--background-color', '');
+      $(':root')
+        .get(0)
+        .style.setProperty('--color', '');
+      $(':root')
+        .get(0)
+        .style.setProperty('--title-color', '');
+      $(':root')
+        .get(0)
+        .style.setProperty('--text-color', '');
+      $(':root')
+        .get(0)
+        .style.setProperty('--box-color', '');
+      $(':root')
+        .get(0)
+        .style.setProperty('--text-secondary', '');
+      $(':root')
+        .get(0)
+        .style.setProperty('--box-shadow', '');
+      $(':root')
+        .get(0)
+        .style.setProperty('--nav-shadow', '');
+    }
+  }
+
   navbarFixed();
+  darkModeCSS();
   $('#projectsButton').click(function(e) {
     e.preventDefault();
     var targetElement = $(this).attr('href');
@@ -120,62 +181,6 @@ $(document).ready(function() {
 
   /* Dark Mode Toggle CSS variable changes*/
   $('#darkModeToggle').click(function() {
-    if ($('#darkModeToggle').is(':checked')) {
-      $(':root')
-        .get(0)
-        .style.setProperty('--background-color', '#333333');
-      $(':root')
-        .get(0)
-        .style.setProperty('--color', 'white');
-      $(':root')
-        .get(0)
-        .style.setProperty('--title-color', 'white');
-      $(':root')
-        .get(0)
-        .style.setProperty('--text-color', 'rgba(255, 255, 255, 0.762)');
-      $(':root')
-        .get(0)
-        .style.setProperty('--box-color', '#35383b');
-      $(':root')
-        .get(0)
-        .style.setProperty('--text-secondary', 'rgba(255, 255, 255, 0.762)');
-      $(':root')
-        .get(0)
-        .style.setProperty(
-          '--box-shadow',
-          ' 0px 10px 30px rgba(255,255,255, 0.205)'
-        );
-      $(':root')
-        .get(0)
-        .style.setProperty(
-          '--nav-shadow',
-          ' 0px 10px 30px rgba(255,255,255, 0.03)'
-        );
-    } else {
-      $(':root')
-        .get(0)
-        .style.setProperty('--background-color', '');
-      $(':root')
-        .get(0)
-        .style.setProperty('--color', '');
-      $(':root')
-        .get(0)
-        .style.setProperty('--title-color', '');
-      $(':root')
-        .get(0)
-        .style.setProperty('--text-color', '');
-      $(':root')
-        .get(0)
-        .style.setProperty('--box-color', '');
-      $(':root')
-        .get(0)
-        .style.setProperty('--text-secondary', '');
-      $(':root')
-        .get(0)
-        .style.setProperty('--box-shadow', '');
-      $(':root')
-        .get(0)
-        .style.setProperty('--nav-shadow', '');
-    }
+    darkModeCSS();
   });
 });
