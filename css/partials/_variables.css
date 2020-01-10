@@ -10,10 +10,10 @@ body {
 
 /* CSS Variables */
 :root {
-  --background-color: white;
-  --color: black;
-  --primary-color: #1d6ba2;
-  --title-color: black;
+  --background-color: snow;
+  --color: #1e1e1e;
+  --primary-color: #c44133;
+  --title-color: #1e1e1e;
   --text-color: #777777;
   --text-secondary: #6c757d;
   --border-color: #777777;

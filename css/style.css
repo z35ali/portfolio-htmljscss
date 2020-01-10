@@ -121,7 +121,7 @@ div.radio.switcher label input:checked + span small {
 
 #colorPicker {
   -webkit-appearance: none;
-  padding: 0;
+
   border: none;
   border-radius: 10px;
   width: 40px;
@@ -179,7 +179,7 @@ div.radio.switcher label input:checked + span small {
 }
 
 .site-main .site-banner .banner-image > img {
-  padding: 7rem 0;
+  padding: 7rem 0px 0px 0px;
   width: 90rem;
 }
 
@@ -292,6 +292,7 @@ div.radio.switcher label input:checked + span small {
   width: 16rem;
   margin: 5rem 0.5rem;
   transition: box-shadow 0.7s ease;
+  border: 0.5px solid rgba(0, 0, 0, 0.054);
 }
 
 .site-main > .languages-area .languages:hover {
@@ -335,6 +336,7 @@ ul {
   width: 16rem;
   margin: 5rem 0.5rem;
   transition: box-shadow 0.7s ease;
+  border: 0.5px solid rgba(0, 0, 0, 0.054);
 }
 
 .site-main > .skills-area .skills:hover {
